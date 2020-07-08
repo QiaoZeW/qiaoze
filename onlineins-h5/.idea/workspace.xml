@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="995a1f94-6945-4af6-bc80-24e58739b6c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/build/webpack.dev.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/build/webpack.sit.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/build/webpack.sit.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/demo_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/demo_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/iconfont.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/iconfont/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/02.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/06.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/07.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/08.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/banner01.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/banner01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/banner02.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/01/banner02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/01.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/03.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/07.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/08.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/09.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_m_entrance/02/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/PCIndex/pro03.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/PCIndex/pro03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/PCIndex/product01.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/PCIndex/product01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/PCIndex/product02.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/PCIndex/product02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/detail.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/128/detail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/130/detail.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/activity_pc/pc_detail/130/detail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/newBickness/bgTop@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/assets/imgs/newBickness/bgTop@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/components/GiftInsurance/Yhtinfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/components/GiftInsurance/Yhtinfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/components/HotProducts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/components/HotProducts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/components/Mongolia/Mongolia.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/components/Mongolia/Mongolia.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/components/Share/Mongolia.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/components/Share/Mongolia.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/components/smsCode/SendCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/components/smsCode/SendCode.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/routes.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/routes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/static/bankdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/static/bankdata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/static/job6.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/static/job6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/utils/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/utils/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/utils/dictionary.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/utils/dictionary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/utils/nativeUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/utils/nativeUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/utils/shence_trial.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/utils/shence_trial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/utils/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/BnSickness.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/BnSickness.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/HeadLinesLanding.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/HeadLinesLanding.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/IntegralExchange/ExRecord.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/IntegralExchange/ExRecord.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/IntegralExchange/MyIntegEx.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/IntegralExchange/MyIntegEx.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Investigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Investigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Lover/Lover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Lover/Lover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/NovicePrize.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/NovicePrize.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/PCindex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/PCindex.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/layout/detail/proDetailData.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/layout/detail/proDetailData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/layout/detail/proIntroData.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/layout/detail/proIntroData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/layout/detail/questionsDatas.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/PC/layout/detail/questionsDatas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/TaskCenter/TaskCenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/TaskCenter/TaskCenter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Visit/VisitSign.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Visit/VisitSign.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Visit/VisitSuccess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/Visit/VisitSuccess.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppLanding.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppLanding.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppService.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentPrize01.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentPrize01.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentPrize03.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentPrize03.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentPro02.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentPro02.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentStart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/appointment/AppointmentStart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity01.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity01.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity02.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity02.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity03.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity03.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity04.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Activity04.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/m/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/StepComputed.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/StepComputed.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/ZuiMarket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/ZuiMarket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/rankingList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/rankingList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/stepDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/activity/step/stepDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/AgainOrderPayments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/AgainOrderPayments.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/ConfirmVisit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/ConfirmVisit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/ExternalList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/ExternalList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/ExternalLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/ExternalLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/PolicyDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/PolicyDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/SuccessfulPay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/externalPay/SuccessfulPay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/mp/MpPolicyList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/mp/MpPolicyList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/policypreservation/policyservice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/policypreservation/policyservice.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/preservation/contact/ContactDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/preservation/contact/ContactDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/AgainOrderPayment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/AgainOrderPayment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/ArtificialConfirm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/ArtificialConfirm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Buy.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Buy.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/ConfirmSick.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/ConfirmSick.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Health.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Health.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthNotification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthNotification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthNotification.vue.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthTwice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthTwice.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthYht.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/HealthYht.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/IntelligentUnderwriting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/IntelligentUnderwriting.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/KangluxuryTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/KangluxuryTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/OrderPayments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/OrderPayments.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/PlusTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/PlusTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/ProductClause.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/ProductClause.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Questions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Questions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/SpecialOccupation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/SpecialOccupation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Successful.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Successful.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Sucess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Sucess.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/SunxinbaoDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/SunxinbaoDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/Trial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/Trial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/WaitPayResult.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/WaitPayResult.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/WeChatEnterpriseShare/EnterpriseShareDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/WeChatEnterpriseShare/EnterpriseShareDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/YihtHealthTwice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/YihtHealthTwice.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/agent/AgentSuccessful.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/agent/AgentSuccessful.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/chaobeibao/ChaobeibaoTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/chaobeibao/ChaobeibaoTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/chaohuibao/ChaohuibaoTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/chaohuibao/ChaohuibaoTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/dkorenix/DKorenixTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/dkorenix/DKorenixTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/giftInsurance/GiftInsurance.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/giftInsurance/GiftInsurance.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/giftInsurance/GiftInsuranceDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/giftInsurance/GiftInsuranceDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/giftInsurance/GiftSuccessful.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/giftInsurance/GiftSuccessful.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/giving/GPolicyDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/giving/GPolicyDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/giving/Gbuycomp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/giving/Gbuycomp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/giving/StatusBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/giving/StatusBlock.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/jiahuibao/Trial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/jiahuibao/Trial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/kangbeyond/KangBeyondTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/kangbeyond/KangBeyondTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/nosorrow/NoSorrowTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/nosorrow/NoSorrowTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/yaohuitong/YaohuitongTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/yaohuitong/YaohuitongTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/yihuibao/YihuibaoTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/yihuibao/YihuibaoTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/src/views/product/yihuitongzx/YihuitongTrial.vue" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/src/views/product/yihuitongzx/YihuitongTrial.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/static/jsbridge.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/static/jsbridge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineins-h5/static/shence.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineins-h5/static/shence.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/onlineins-h5" />
+  </component>
+  <component name="ProjectId" id="1ZNRy4ZOfHpbqdWkLRCrlsYdp4v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/作品" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="995a1f94-6945-4af6-bc80-24e58739b6c2" name="Default Changelist" comment="" />
+      <created>1584677816109</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584677816109</updated>
+      <workItem from="1584677817424" duration="2077000" />
+      <workItem from="1587361236148" duration="2501000" />
+      <workItem from="1587378127952" duration="685000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
