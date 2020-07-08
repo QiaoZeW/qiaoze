@@ -1,0 +1,579 @@
+<template>
+  <div class="section health-wrap">
+    <form ref="health">
+      <div class="form-item required first">
+        <div class="form-item-title">1、首次发病日期</div>
+        <div class="form-item-content">
+          <div class="input-item">
+            <input
+              type="text"
+              @focus="datePickerShowFn1($event)"
+              placeholder="请选择日期"
+              v-model="healthDatas['01']"
+            >
+
+            <md-date-picker
+              ref="datePicker1"
+              v-model="isDatePickerShow1"
+              type="custom"
+              :min-date="minDate"
+              :max-date="maxDate"
+              title="选择首次发病日期"
+              :custom-types="['yyyy', 'MM','dd']"
+              :default-date="currentDate"
+              @confirm="onDatePickerConfirm1"
+            ></md-date-picker>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item required">
+        <div class="form-item-title">2、主要症状</div>
+        <div class="form-item-content">
+          <div class="input-item">
+            <textarea placeholder="被保人健康状况描述" v-model="healthDatas['02']"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item required">
+        <div class="form-item-title">3、具体诊断</div>
+        <div class="form-item-content">
+          <div class="input-item">
+            <textarea placeholder="医院诊断疾病名称" v-model="healthDatas['03']"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item required">
+        <div class="form-item-title">4、发作情况</div>
+        <div class="form-item-content">
+          <div class="input-item">
+            <p>a、发作持续时间</p>
+            <input type="text" placeholder="每天发病持续平均时长" v-model="healthDatas['04A']">
+          </div>
+          <div class="input-item">
+            <p>b、发作频率</p>
+            <input type="text" placeholder="如每天/每周" v-model="healthDatas['04B']">
+          </div>
+          <div class="input-item">
+            <p>c、最近一次发作时间</p>
+            <input
+              type="text"
+              placeholder="选择时间"
+              @focus="datePickerShowFn2($event)"
+              v-model="healthDatas['04C']"
+            >
+            <md-date-picker
+              ref="datePicker2"
+              v-model="isDatePickerShow2"
+              type="custom"
+              :min-date="minDate"
+              :max-date="maxDate"
+              title="最近一次发作时间"
+              :custom-types="['yyyy', 'MM','dd']"
+              :default-date="currentDate"
+              @confirm="onDatePickerConfirm2"
+            ></md-date-picker>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item required">
+        <div class="form-item-title">5、治疗情况</div>
+        <div class="form-item-content">
+          <div class="input-item">
+            <p>a、目前是否正在治疗</p>
+            <label>
+              <input type="radio" name="005a" value="是" v-model="healthDatas['005a']">是
+            </label>
+            <label style="margin-left: 40px;">
+              <input type="radio" name="005a" value="否" v-model="healthDatas['005a']">否
+            </label>
+            <input
+              type="text"
+              class="ext"
+              placeholder="请输入停止治疗时间"
+              v-if="healthDatas['005a'] === '否'"
+              v-model="A5"
+              @focus="datePickerShowFn3($event)"
+            >
+            <md-date-picker
+              ref="datePicker3"
+              v-model="isDatePickerShow3"
+              type="custom"
+              :min-date="minDate"
+              :max-date="maxDate"
+              title="选择停止治疗时间"
+              :custom-types="['yyyy', 'MM','dd']"
+              :default-date="currentDate"
+              @confirm="onDatePickerConfirm3"
+            ></md-date-picker>
+          </div>
+          <div class="input-item">
+            <p>b、治疗的方法（多选，至少选一个）</p>
+            <div class="iput-childen">
+              <label>
+                <input type="checkbox" value="手术治疗" v-model="healthDatas['05B1']">手术治疗
+              </label>
+              <input
+                type="text"
+                class="ext"
+                placeholder="请输入手术名称"
+                v-if="healthDatas['05B1']"
+                v-model="B1"
+              >
+            </div>
+            <div class="iput-childen">
+              <label>
+                <input type="checkbox" value="药物治疗" v-model="healthDatas['05B2']">药物治疗
+              </label>
+              <input
+                type="text"
+                class="ext"
+                placeholder="请输入药物名称"
+                v-if="healthDatas['05B2']"
+                v-model="B2"
+              >
+            </div>
+
+            <div class="iput-childen">
+              <label>
+                <input type="checkbox" value="物理治疗" v-model="healthDatas['05B3']">物理治疗
+              </label>
+            </div>
+            <div class="iput-childen">
+              <label>
+                <input type="checkbox" value="其他治疗" v-model="healthDatas['05B4']">其他治疗
+              </label>
+              <input
+                type="text"
+                class="ext"
+                placeholder="其他的请具体说明"
+                v-if="healthDatas['05B4']"
+                v-model="B4"
+              >
+            </div>
+          </div>
+          <div class="input-item">
+            <div class="input-item">
+              <p>c、治疗效果</p>
+              <div class="iput-childen">
+                <label>
+                  <input type="radio" name="05C" value="1" v-model="healthDatas['05C']">治愈，无不适症状，无复发
+                </label>
+              </div>
+              <div class="iput-childen">
+                <label>
+                  <input type="radio" name="05C" value="2" v-model="healthDatas['05C']">症状缓解
+                </label>
+              </div>
+              <div class="iput-childen">
+                <label>
+                  <input type="radio" name="05C" value="3" v-model="healthDatas['05C']">未治愈，治疗无效果，症状无缓解或加重
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <div class="form-item-title">6.补充说明（选填）</div>
+        <div class="form-item-content">
+          <div class="input-item">
+            <textarea placeholder="补充说明" v-model="healthDatas['06']"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <md-button type="primary" @click="goNext">提交</md-button>
+      </div>
+    </form>
+  </div>
+</template>
+
+<script>
+import { Toast } from "mand-mobile";
+export default {
+  name: "HealthNotification",
+  components: {},
+  data() {
+    return {
+      minDate: null,
+      maxDate: null,
+      currentDate: new Date(),
+      isDatePickerShow1: false,
+      isDatePickerShow2: false,
+      isDatePickerShow3: false,
+      healthDatas: {
+        "01": "",
+        "02": "",
+        "03": "",
+        "04A": "",
+        "04B": "",
+        "04C": "",
+        "005a": "",
+        "05B1": "",
+        "05B2": "",
+        "05B3": "",
+        "05B4": "",
+        "05C": "",
+        "06": ""
+      },
+      B1: "",
+      B2: "",
+      B3: "",
+      B4: "",
+      A5: "",
+      subDatas: {
+        // idNo: "", //
+        // name: "",
+        impartInfoList: [
+          // {code: "string",param: "string"}
+        ]
+      },
+      product_id: ""
+    };
+  },
+  created() {
+    this.init();
+  },
+  methods: {
+    init() {
+      document.title = "补充健康告知";
+      this.product_id = this.$router.query("product_id") || "1";
+      const { idNo, name, sex, birthday, idType } = JSON.parse(
+        localStorage.getItem("allInfo")
+      ).insuredInfoList[0];
+      setupWebViewJavascriptBridge(function(bridge) {
+        bridge.callHandler(
+          "backHomeConfig",
+          {
+            flag_back: 0 //是否返回按钮，1-返回 0-不返回
+          },
+          function(response) {}
+        );
+      });
+      this.subDatas.idNo = idNo;
+      this.subDatas.name = name;
+      this.subDatas.sex = sex;
+      this.subDatas.birthday = birthday;
+      this.subDatas.idType = idType;
+    },
+    datePickerShowFn1(e) {
+      document.activeElement.blur();
+      this.isDatePickerShow1 = true;
+    },
+    datePickerShowFn2(e) {
+      document.activeElement.blur();
+      this.isDatePickerShow2 = true;
+    },
+    datePickerShowFn3(e) {
+      document.activeElement.blur();
+      this.isDatePickerShow3 = true;
+    },
+    onDatePickerConfirm1() {
+      this.healthDatas["01"] = this.$refs["datePicker1"].getFormatDate(
+        "yyyy/MM/dd"
+      );
+    },
+    onDatePickerConfirm2() {
+      this.healthDatas["04C"] = this.$refs["datePicker2"].getFormatDate(
+        "yyyy/MM/dd"
+      );
+    },
+    onDatePickerConfirm3() {
+      this.A5 = this.$refs["datePicker3"].getFormatDate("yyyy/MM/dd");
+    },
+    deImpartInfoList() {
+      const impartInfoList = [];
+      for (let i in this.healthDatas) {
+        let item = this.healthDatas[i];
+        const impartInfoObj = {
+          code: i,
+          param: ""
+        };
+        switch (i) {
+          case "005a":
+            if (item) {
+              impartInfoObj.param = `N,${this.A5}`;
+            } else {
+              impartInfoObj.param = "Y";
+            }
+            impartInfoList.push(impartInfoObj);
+            break;
+          case "05B1":
+            if (item) {
+              impartInfoObj.param = `Y,${this.B1}`;
+            } else {
+              impartInfoObj.param = "N";
+            }
+            impartInfoList.push(impartInfoObj);
+            break;
+          case "05B2":
+            if (item) {
+              impartInfoObj.param = `Y,${this.B2}`;
+            } else {
+              impartInfoObj.param = "N";
+            }
+            impartInfoList.push(impartInfoObj);
+            break;
+          case "05B3":
+            if (item) {
+              impartInfoObj.param = `Y`;
+            } else {
+              impartInfoObj.param = `N`;
+            }
+            impartInfoList.push(impartInfoObj);
+            break;
+          case "05B4":
+            if (item) {
+              impartInfoObj.param = `Y,${this.B4}`;
+            } else {
+              impartInfoObj.param = "N";
+            }
+            break;
+          case "05C":
+            let jieguo1 = "N";
+            let jieguo2 = "N";
+            let jieguo3 = "N";
+            if (item === "1") {
+              jieguo1 = "Y";
+            } else if (item === "2") {
+              jieguo1 = "Y";
+            } else if (item === "3") {
+              jieguo1 = "Y";
+            }
+            impartInfoList.push(
+              { code: "05C1", param: jieguo1 },
+              { code: "05C2", param: jieguo2 },
+              { code: "05C3", param: jieguo3 }
+            );
+            break;
+          case "06":
+            if (!item) {
+              impartInfoObj.param = `无`;
+            } else {
+              impartInfoObj.param = item;
+            }
+            impartInfoList.push(impartInfoObj);
+            break;
+          default:
+            impartInfoObj.param = item;
+            impartInfoList.push(impartInfoObj);
+            break;
+        }
+      }
+      return impartInfoList;
+    },
+    validate() {
+      if (!this.healthDatas["01"]) {
+        Toast.info("请输入首次发病日期");
+        return false;
+      } else if (!this.healthDatas["02"]) {
+        Toast.info("请输入被保人健康状况描述");
+        return false;
+      } else if (!this.healthDatas["03"]) {
+        Toast.info("请输入医院诊断疾病名称");
+        return false;
+      } else if (!this.healthDatas["04A"]) {
+        Toast.info("请输入发病持续时间");
+        return false;
+      } else if (!this.healthDatas["04B"]) {
+        Toast.info("请输入发作频率");
+        return false;
+      } else if (!this.healthDatas["04C"]) {
+        Toast.info("请输入最近一次发作时间");
+        return false;
+      } else if (!this.healthDatas["005a"]) {
+        Toast.info("请选择是否正在治疗");
+        return false;
+      } else if (this.healthDatas["005a"] === "否" && !this.A5) {
+        Toast.info("请输入停止治疗时间");
+        return false;
+      } else if (
+        !this.healthDatas["05B1"] &&
+        !this.healthDatas["05B2"] &&
+        !this.healthDatas["05B3"] &&
+        !this.healthDatas["05B4"]
+      ) {
+        Toast.info("请选择治疗方法");
+        return false;
+      } else if (!this.healthDatas["05C"]) {
+        Toast.info("请选择治疗效果相关项");
+        return false;
+      } else {
+        if (this.healthDatas["05B1"] && !this.B1) {
+          Toast.info("请输入手术名称");
+          return false;
+        }
+        if (this.healthDatas["05B2"] && !this.B2) {
+          Toast.info("请输入药物名称");
+          return false;
+        }
+        if (this.healthDatas["05B4"] && !this.B4) {
+          Toast.info("请输入其他治疗内容");
+          return false;
+        }
+      }
+      return true;
+    },
+    goNext() {
+      if (!this.validate()) {
+        return;
+      }
+      this.subDatas.impartInfoList = this.deImpartInfoList();
+      localStorage.setItem("HealthNotification", JSON.stringify(this.subDatas)); //缓存数据至buy页面提交
+      // this.$app.getUserCode(userCode => {
+      //   localStorage.removeItem("underwriteInfo" + userCode + this.product_id);
+      // });
+
+      let that = this;
+      Toast.succeed("提交成功");
+      setTimeout(() => {
+        location.href =
+          that.$router.siteUrl() +
+          "/product/Buy.html?product_id=" +
+          that.product_id;
+      }, 2000);
+
+      // this.$request({
+      //   url: `/question/getMoreimpartinfo`,
+      //   params: {},
+      //   method: "POST",
+      //   data: this.subDatas,
+      //   isLoading: true,
+      //   contentType: "application/json;charset=UTF-8",
+      //   successFn: data => {
+      //     let _this = this;
+      //     this.$app.getUserCode(userCode => {
+      //       localStorage.removeItem(
+      //         "underwriteInfo" + userCode + _this.product_id
+      //       );
+      //     });
+
+      //     Toast.succeed("提交成功");
+      //     setTimeout(function() {
+      //       location.href =
+      //         _this.$router.siteUrl() +
+      //         "/product/Detail.html?product_id=" +
+      //         _this.product_id;
+      //     }, 2000);
+      //   },
+      //   failFn: err => {
+      //     Toast.failed(err.resultMsg);
+      //   }
+      // });
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+$family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, 微软雅黑, Arial, sans-serif;
+.health-wrap {
+  padding: 0 32px 72px 32px;
+  min-height: 100%;
+  font-family: $family;
+
+  .form-item {
+    margin: 34px 0;
+    &.required {
+      position: relative;
+    }
+    &.required::before {
+      position: absolute;
+      top: 0;
+      left: 200px;
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: url("../../assets/imgs/intelligentunderwrite/required.png")
+        top center no-repeat;
+      background-size: 100%;
+    }
+    &.required.first::before {
+      left: 270px;
+    }
+
+    .form-item-title {
+      font-size: 32px;
+      color: #333;
+      padding-bottom: 24px;
+    }
+
+    .form-item-content {
+      .input-item {
+        margin-bottom: 24px;
+        font-size: 28px;
+        p {
+          margin-bottom: 24px;
+          font-family: $family;
+        }
+        input[type="text"] {
+          width: 100%;
+          border: 1px solid #333;
+          box-sizing: border-box;
+          padding: 20px 18px 20px 18px;
+          border-radius: 12px;
+          font-family: $family;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+          vertical-align: -8px;
+          margin-right: 24px;
+          font-family: $family;
+          font-size: 28px;
+          width: 34px;
+          height: 34px;
+        }
+        textarea {
+          width: 100%;
+          min-height: 144px;
+          box-sizing: border-box;
+          border: 1px solid #333;
+          border-radius: 12px;
+          padding: 18px;
+          font-family: $family;
+          font-size: 28px;
+        }
+        .ext {
+          margin: 20px 0;
+        }
+        .iput-childen {
+          margin-bottom: 20px;
+        }
+        input[type="text"]::-webkit-input-placeholder {
+          padding: 0;
+          line-height: 30px;
+        }
+        textarea::-webkit-input-placeholder {
+          font-size: 28px;
+          padding: 0;
+          line-height: 30px;
+          font-family: $family;
+        }
+      }
+    }
+  }
+
+  .md-button {
+    border-radius: 20px;
+
+    &.primary.active,
+    &.primary.active:active,
+    &.primary {
+        background-color: #d7000f;
+        border-color: #d7000f;
+        border-radius: 20px;
+    }
+    
+    &.primary:after {
+        border-color: #d7000f;
+        border-radius: 20px;
+    }
+}
+}
+</style>

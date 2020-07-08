@@ -1,0 +1,725 @@
+
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+        <meta http-equiv="Content-Type" content="textml; charset=UTF-8" />
+  		<meta http-equiv="x-dns-prefetch-control" content="on" />
+  		<meta name="apple-mobile-web-app-capable" content="yes" />
+  		<meta content="telephone=no" name="format-detection" />
+  		<meta name="full-screen" content="yes" />
+  		<meta name="x5-fullscreen" content="true" />
+
+		<script src="anysignWebInterface.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+      * {
+        /*初始化样式*/
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        /*用于 获取 屏幕的可视宽高*/
+        width: 100%;
+        height: 100%;
+        /*overflow: hidden;*/
+      }
+      body {
+        /*让 body 初始 width 和 height 就 等于 页面可视区域的 宽高*/
+        /*position: fixed;*/
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        /*用于 测试的 样式*/
+        /*background-color: #444;*/
+        /*color: #FFF;*/
+        /*letter-spacing: 4px;*/
+        /*font-size: 28px;*/
+        /*文字居中*/
+        display: flex;
+        justify-content: center;
+        /*align-items: center;*/
+      }
+      @media screen and (orientation:portrait) {
+        /*竖屏样式*/
+        .body{
+          transform-origin: 0 0;
+          transform: rotateZ(90deg) translateY(-100%);
+        }
+        .canvas {
+          transform-origin: 0 0;
+          transform: rotateZ(270deg) translateY(0%) translateX(-100%);
+          position: fixed;
+          /*top: 0;*/
+          left: 0;
+        }
+      }
+
+
+
+
+
+			.comment_titlecss {
+				font-size: 20px;
+				clear: both;
+			}
+
+			.comment_btncontainer {
+				/*text-align: center;
+				font-size: 30pt;
+				width: 100%;
+				clear: both;*/
+
+				text-align: center;
+				margin:0 auto
+				font-size: 40pt;
+				width: 100%;
+				clear: both;
+				position: absolute;
+				bottom: 10;
+			}
+
+			.signImagecss {
+				-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+				overflow: scroll;
+				border: 1px solid rgb(229, 229, 229)
+			}
+
+			.tmpcanvascss {
+				border: 1px solid rgb(229, 229, 229)
+			}
+
+			.btn_orange {
+				font-size: 20pt;
+				color: #fef4e9;
+				border: solid 1px #da7c0c;
+				background: #f78d1d;
+				background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+			}
+		</style>
+
+    <script language="JavaScript" type="text/JavaScript" charset="utf-8">
+
+      document.onreadystatechange = setAlertTitle;
+
+      var apiInstance;
+      var fileData;
+      var ocrCapture;
+
+			var DATA_CANNOT_PARSED = "10003"; //输入数据项无法解析
+			var SERVICE_SYSTEM_EXCEPTION = "10011"; //服务系统异常错误
+			var RECOGNITION_RESULT_EMPTY = "10100"; //识别结果为空
+			var CONNECTION_SERVICE_TIMEOUT = "10101"; //连接识别服务超时
+			var CONNECTION_RECOGNITION_EXCEPTION = "10102"; //连接识别服务异常
+			var SUCCESS = "0"; //识别成功
+			var RECOGNITION_FALSE = "-1";//识别错误
+			var RESULT_OK = 0; //操作成功
+			var CALLBACK_TYPE_SIGNATURE = 10; //签名框点击确认之后的回调，回调中包含签名快照
+			var CALLBACK_TYPE_DIALOG_CANCEL = 11; //点击签名框"取消"按钮时的回调，同时也会触发dismiss回调
+			var CALLBACK_TYPE_COMMENTSIGN = 12; //批注签名框点击确认之后的回调，回调中包含签名快照
+			var CALLBACK_TYPE_GETVERSION = 13; //获得版本号
+
+			var RESULT_ERROR = -1; //操作失败
+			var EC_API_NOT_INITED = 1; //接口未初始化错误
+
+            function setAlertTitle()
+            {
+                document.title = "返回结果";
+            }
+
+
+			     //配置模板数据
+            function testSetTemplateData()
+            {
+
+               // var formData = "{\"bjcaxssrequest\":{\"submitinfo\":[{\"username\":\"测星雨\",\"identitycardnbr\":\"320902198901191012\"},{\"username\":\"测星雨123\",\"identitycardnbr\": \"320902198901191012\"}]}}";
+
+                var formData = "PGh0bWw+PGhlYWQ+PHRpdGxlPjwvdGl0bGU+PG1ldGEgaHR0cC1lcXVpdj0nQ29udGVudC1UeXBlJyBjb250ZW50PSd0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgnIC8+PC9oZWFkPjxib2R5PjxkaXY+PGRpdj48bGFiZWw+a2V5d29yZDo8L2xhYmVsPjwvZGl2PjxkaXY+PGxhYmVsPuWIl+WQjTLvvJo8L2xhYmVsPjwvZGl2PjxkaXY+PGxhYmVsPuWIl+WQjTPvvJo8L2xhYmVsPjwvZGl2PjwvZGl2PjwvYm9keT48L2h0bWw+";
+               //文件数据
+               //  		    var formData = fileData;
+                var businessId = "123123";//集成信手书业务的唯一标识
+
+                var template_serial = "4000";//用于生成PDF的模板ID
+
+
+                var res;
+
+                //配置JSON格式签名原文
+                /**
+                 * 设置表单数据，每次业务都需要set一次
+                 * @param template_type 签名所用的模板类型
+                 * @param contentUtf8Str 表单数据，类型为Utf8字符串
+                 * @param businessId 业务工单号
+                 * @param template_serial 模板序列号
+                 * @returns {*} 是否设置成功
+                 */
+                res = apiInstance.setTemplate(TemplateType.HTML,formData,businessId,template_serial);
+
+                if(res)
+                {
+                  testAddEvidence()
+                  console.log("setTemplateData success");
+                  return res;
+                }
+                else
+                {
+                    alert("setTemplateData error");
+                    return res;
+                }
+            }
+
+            //选择文件
+      			function  handleFiles(files)
+      			{
+          			if(files.length)
+          			{
+              			var file = files[0];
+              			var reader = new FileReader();
+
+              			reader.onload = function FileReaderOnload() {
+                  		var buffer = reader.result;
+                  		var uint8Array = new Uint8Array(reader.result);
+                  		var bufStr = "";
+                  		var bufarray = Base64.encodeUint8Array(uint8Array);
+                  		bufStr = bufarray;
+                  		fileData = bufStr;
+              			};
+              			reader.readAsArrayBuffer(file);
+          			}
+      			}
+
+          	//添加单签签名框
+            function testAddSignatureObj(objId)
+            {
+
+                var context_id = objId;
+                var signer = new Signer("李明", "11011111111");
+
+                /**
+                 * 根据坐标定位签名方式
+                 * @param left 签名图片最左边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param top 签名图片顶边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param right 签名图片最右边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param bottom 签名图片底边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param pageNo 签名在PDF中的页码，从1开始
+                 * @param unit 坐标系单位，目前支持"dp"和"pt"
+                 * @constructor
+                 */
+                if(objId == 20){
+             		var signerRule = new SignRule_XYZ(100.0, 110.1, 180.2, 50.3, 1, "pt");
+                }else{
+             		var signerRule = new SignRule_XYZ(100.0, 110.1, 180.2, 50.3, 1, "pt");
+                }
+
+
+				/**
+				 * 关键字定位方式，寻找PDF中的关键字，根据关键字位置放置签名图片
+				 * @param keyword 关键字
+				 * @param keyWordAlignMethod 签字图片和关键字位置关系：等于1时，签字图片和关键字矩形重心重合
+				 *                            等于2时，签字图片位于关键字正下方，中心线对齐；等于3时，签字图片位于关键字正右方，中心线对齐；
+				 *                            等于4时，签字图片左上角和关键字右下角重合，可能额外附加偏移量，详见构造函数的offset参数
+				 * @param keyWordOffset 当keyWordAlignMethod非零时，额外附加的偏移量，单位pt
+				 * @param pageNo 寻找关键字的PDF起始页码
+				 * @param KWIndex KWIndex 第几个关键字
+				 * @constructor
+				 */
+		      //    var signerRule = new SignRule_KeyWord("甲方签字",2,0,1,1);
+				//var signerRule = new SignRule_KeyWordV2("签名算法",50,0,1,1);
+
+                /**
+                 *根据关键字定位签名位置
+                 * @param keyWord 关键字字面值
+                 * @param xOffset X轴偏移量，适配关键字和规则
+                 * @param yOffset Y轴偏移量，适配关键字和规则
+                 * @param pageNo 签名在PDF中的页码，第几页查找关键字，正数为正序，当是负数为倒序
+                 * @param KWIndex KWIndex 第几个关键字
+                 * @constructor
+                 */
+//                var signerRule = new SignRule_KeyWord("签名算法",100,100,1,1);
+
+                /**
+                 * 关键字定位方式，寻找PDF中的关键字，根据关键字位置放置签名图片
+                 * @param keyword 关键字
+                 * @param keyWordAlignMethod 签字图片和关键字位置关系：等于0时，签字图片和关键字矩形重心重合
+                 *                            等于1时，签字图片位于关键字正下方，中心线对齐；等于2时，签字图片位于关键字正右方，中心线对齐；
+                 *                            等于3时，签字图片左上角和关键字右下角重合，可能额外附加偏移量，详见构造函数的offset参数
+                 * @param keyWordOffset 当keyWordAlignMethod非零时，额外附加的偏移量，单位pt
+                 * @param pageNo 寻找关键字的PDF起始页码
+                 * @param KWIndex KWIndex 第几个关键字
+                 * @constructor
+                 */
+//                var signerRule = new SignRule_KeyWordV2("关键字", "0", 10, 1,1);
+
+
+                var signatureConfig = new SignatureConfig(signer,signerRule);
+//                   1:时间在上、2：时间在下、3：时间在右
+                var timeTag = new TimeTag(1,"yyMMdd hh:mm;ss");
+                signatureConfig.timeTag = timeTag;
+				signatureConfig.singleWidth = 500;
+				signatureConfig.singleHeight = 500;
+				signatureConfig.title = "请投保人李明签字";
+				signatureConfig.penColor = "#FF0000";
+                signatureConfig.isTSS = true;//是否开始时间戳服务
+                signatureConfig.signatureImgRatio = 3.0;
+                signatureConfig.nessesary = false;
+                signatureConfig.isdistinguish = false;
+                signatureConfig.ocrCapture = ocrCapture;
+                var res = apiInstance.addSignatureObj(context_id,signatureConfig);
+                if(res)
+                {
+                    console.log("addSignatureObj "+context_id+" success");
+                    return res;
+                }
+                else
+                {
+                    alert("addSignatureObj "+context_id+" error");
+                    return res;
+                }
+            }
+
+
+            //添加批签签名框
+            function testAddCommentObj(objId)
+            {
+
+                var context_id = objId;
+                var signer = new Signer("李明", "11011111111");
+
+                /**
+                 * 根据坐标定位签名方式
+                 * @param left 签名图片最左边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param top 签名图片顶边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param right 签名图片最右边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param bottom 签名图片底边坐标值，相对于PDF当页最左下角(0,0)点，向上和向右分别为X轴、Y轴正方向
+                 * @param pageNo 签名在PDF中的页码，从1开始
+                 * @param unit 坐标系单位，目前支持"dp"和"pt"
+                 * @constructor
+                 */
+                var signerRule = new SignRule_XYZ(84.0, 523.0, 400.0, 477.0, 1, "dp");
+
+
+
+               /**
+               				* 关键字定位方式，寻找PDF中的关键字，根据关键字位置放置签名图片
+               				* @param keyword 关键字
+               				* @param keyWordAlignMethod 签字图片和关键字位置关系：等于1时，签字图片和关键字矩形重心重合
+               				*                           等于2时，签字图片位于关键字正下方，中心线对齐；等于3时，签字图片位于关键字正右方，中心线对齐；
+               				*                            等于4时，签字图片左上角和关键字右下角重合，可能额外附加偏移量，详见构造函数的offset参数
+               				* @param keyWordOffset 当keyWordAlignMethod非零时，额外附加的偏移量，单位pt
+               				* @param pageNo 寻找关键字的PDF起始页码
+               				* @param KWIndex KWIndex 第几个关键字
+               				* @constructor
+               				*/
+              //              var signerRule = new SignRule_KeyWord("默认",4,0,1,1);
+
+
+                var commentConfig = new CommentConfig(signer,signerRule);
+                commentConfig.commitment = "本人已阅";
+                commentConfig.mass_word_height = 50;
+                commentConfig.mass_word_width = 50;
+                commentConfig.mass_words_in_single_line = 4;
+				        commentConfig.penColor = "#FF0000";
+                commentConfig.nessesary = false;
+                commentConfig.isdistinguish = false;
+                commentConfig.ocrCapture = ocrCapture;
+                commentConfig.mass_dlg_type = CommentInputType.WhiteBoard;
+                var res = apiInstance.addCommentObj(context_id,commentConfig);
+                if(res)
+                {
+                    console.log("addCommentObj "+context_id+" success");
+                    return res;
+                }
+                else
+                {
+                    alert("addCommentObj "+context_id+" error");
+                    return res;
+                }
+            }
+
+
+            //demo总入口
+            function testAnySign(channel)
+            {
+                var res;
+
+                //识别回调接口
+                var identify_callback = function(errCode){
+                	if(errCode == SUCCESS){
+                		return;
+                	}
+                	if(errCode == DATA_CANNOT_PARSED) {
+              		  alert("输入数据项无法解析！");
+        					} else if(errCode == SERVICE_SYSTEM_EXCEPTION) {
+                        		alert("服务系统异常错误！");
+        					} else if(errCode == RECOGNITION_RESULT_EMPTY) {
+                        		alert("识别结果为空！");
+        					} else if(errCode == CONNECTION_SERVICE_TIMEOUT) {
+                        		alert("连接识别服务超时！");
+        					} else if(errCode == CONNECTION_RECOGNITION_EXCEPTION) {
+                        		alert("连接识别服务异常！");
+        					} else if(errCode == RECOGNITION_FALSE) {
+                        		alert("书写错误！");
+        					}else{
+                        		alert(errCode);
+        					}
+                }
+
+                var callback = function(context_id,context_type,val)
+                {
+
+                    document.getElementById("other").style.display = "block";
+
+                    if(context_type == CALLBACK_TYPE_SIGNATURE)
+                    {
+                        //签名回显
+                      document.getElementById("xss_20").src = "data:image/png;base64," + val;
+                      var aImg=document.getElementById("xss_20");
+                      for(var i=0;i<aImg.length;i++){
+                        aImg[i].style.height="1500";
+                        aImg[i].style.width="1500";
+                      }
+                    }
+                    else if(context_type == CALLBACK_TYPE_COMMENTSIGN)
+                    {
+                    	//签名回显
+                      document.getElementById("xss_21").src = "data:image/png;base64," + val;
+                      var aImg=document.getElementById("xss_21");
+                      for(var i=0;i<aImg.length;i++){
+                        aImg[i].style.height="250";
+                        aImg[i].style.width="250";
+                      }
+
+                    }
+
+                    setAlertTitle();
+                    console.log("收到浏览器回调：" + "context_id：" + context_id + " context_type：" + context_type + " value：" + val);
+                };//测试回调，将回调数据显示
+
+                ////////////////////////////////////////////////
+
+                //设置签名算法，默认为RSA，可以设置成SM2
+                EncAlgType.EncAlg = "RSA";
+
+                apiInstance = new AnySignApi();
+//                var channel = "10010";//渠道号，由信手书提供，请咨询项目经理
+                //初始化签名接口
+                res = apiInstance.initAnySignApi(callback,channel);
+
+                if(!res){
+                	alert("init error");
+                }else{
+
+                }
+                ////////////////////////////////////////////////
+
+                //开启识别
+                ocrCapture = new OCRCapture();
+                ocrCapture.text = "a";
+        				ocrCapture.IPAdress = "http://60.247.77.116:11203/HWR/RecvServlet";
+        				ocrCapture.appID = "123";
+        				ocrCapture.count = 5;
+        				ocrCapture.language = Language.CHS;
+        				ocrCapture.resolution = 80;
+        				ocrCapture.serviceID = "999999";
+
+        				setIdentifyCallBack(identify_callback);
+
+                ///////////////////////////////////////////////
+
+                //注册单字签字对象20
+                res = testAddSignatureObj(20);
+                if(!res){
+                  alert("testAddSignatureObj error");
+                  return;
+                }else{
+
+                }
+
+                res = testAddCommentObj(30);
+                if(!res){
+                  alert("testAddCommentObj error");
+                  return;
+                }else{
+
+                }
+
+                ////////////////////////////////////////////////
+
+                //注册一个单位签章
+
+                var signer = new Signer("小明","110xxxxxx");
+                /**
+                 * 使用服务器规则配置签名
+                 * @param tid 服务器端生成的配置规则
+                 * @constructor
+                 */
+                var signerRule = new SignRule_Tid("111");
+                var cachet_config = new CachetConfig(signer, signerRule, false);
+
+                res = apiInstance.addCachetObj(cachet_config);
+
+                //将配置提交
+                res = apiInstance.commitConfig();
+
+                if(res){
+                	testSetTemplateData()
+                }else{
+                	alert("初始化提交配置失败");
+                }
+            }
+
+            function testIsReadyToUpload()
+            {
+              alert("testIsReadyToUpload :" + apiInstance.isReadyToUpload());
+            }
+
+            //生成签名加密数据
+            function testGenData()
+            {
+              var res = document.getElementById('result');
+              try
+              {
+                res.value = apiInstance.getUploadDataGram();
+                alert("value"+res.value);
+              }
+              catch(err)
+              {
+                alert(err);
+              }
+            }
+
+            //弹出协议框
+            var temp_id = "";
+
+            var showAgreement = true; //选择是否弹出告知协议框
+
+            function show_agreement(context_id) {
+              if(showAgreement == true) {
+                temp_id = context_id;
+                document.getElementById("agreement_layer").style.display = "block";
+              }
+              else {
+                testPopupDialog(context_id);
+              }
+            }
+
+            function agreement_cancel() {
+              document.getElementById("agreement_layer").style.display = "none";
+            }
+
+            function agreement_ok() {
+              document.getElementById("agreement_layer").style.display = "none";
+              testPopupDialog(temp_id);
+            }
+
+            //弹出签名框签名
+            function testPopupDialog(context_id)
+            {
+            	if(!apiInstance){
+                    alert("信手书接口没有初始化");
+                    return;
+            	}
+                switch (apiInstance.showSignatureDialog(context_id))
+                {
+                    case RESULT_OK:
+                      resize()
+                      $("body").addClass("body")
+                      $("#anysignCanvas").addClass("canvas")
+        				      document.getElementById("other").style.display = "none";
+                        break;
+                    case EC_API_NOT_INITED:
+                        alert("信手书接口没有初始化");
+                        break;
+                    case EC_WRONG_CONTEXT_ID:
+                        alert("没有配置相应context_id的签字对象");
+                        break;
+                }
+            }
+
+            function setIdentifyCallBack(callback){
+            	if(!apiInstance){
+                    alert("信手书接口没有初始化");
+                    return;
+            	}
+            	apiInstance.setIdentifyCallBack(callback);
+            }
+
+            //弹出批注签名框
+            function testCommentDialog(context_id)
+            {
+            	if(!apiInstance){
+                    alert("信手书接口没有初始化");
+                    return;
+            	}
+                switch (apiInstance.showCommentDialog(context_id))
+                {
+                    case RESULT_OK:
+        				document.getElementById("other").style.display = "none";
+                        break;
+                    case EC_API_NOT_INITED:
+                        alert("信手书接口没有初始化");
+                        break;
+                    case EC_WRONG_CONTEXT_ID:
+                        alert("没有配置相应context_id的签字对象");
+                        break;
+                    case EC_COMMENT_ALREADY_SHOW:
+                        alert("批注签名框已弹出，请勿重复操作！");
+                }
+
+            }
+
+            //获取签名api版本信息
+            function testGetVersion()
+            {
+                alert(apiInstance.getVersion());
+            }
+
+            //获取设备操作系统信息
+            function testGetOsInfo()
+            {
+                alert(apiInstance.getOSInfo());
+                alert(navigator.userAgent);
+                alert(window.__wxjs_is_wkwebview);
+            }
+
+            //jane
+            function testAddEvidence(result)
+            {
+                testPopupDialog(20)
+            }
+
+        </script>
+
+	</head>
+<body>
+
+	<!--<div style="width: 100%;height: 50%; background: #0000FF;"></div>-->
+  <div id="agreement_layer" style="width: 100%; height: 100%; z-index: 999; display: none; position: absolute; top: 0px; left: 0px;">
+    <div id="agreement_dialog" style="width: 80%; margin: 8% auto; border: 1px solid #666; background-color: #fff;">
+      <div id="agreement_header" style="height: 40px; border-bottom: 1px solid #666; font-size: 14px; line-height: 40px; padding-left: 5px; font-weight: 500;">
+        电子签名服务告知及签署多份文件提示
+      </div>
+
+      <textarea id="agreement_content" style="width: 100%; height: 50%; overflow-y: scroll; border: none; resize: none; font-size: 12px; line-height: 30px; padding: 5px;">
+1.您同意采用电子签名的方式完成当前协议的签订，并认可电子签名与手写签名或盖章具有同等法律效力。
+2.您同意由第三方电子认证服务机构北京数字认证股份有限公司为电子签名提供认证服务，自愿遵守《北京数字认证股份有限公司电子认证业务规则》。您亲自或者授权他人向北京数字认证股份有限公司申请电子签名，保证您提交的申请资料真实、完整、准确，愿意承担由于资料虚假失实而导致的一切后果。
+      </textarea>
+
+      <div id="agreement_btnContainerInner" style="height: 40px; border-top: 1px solid #666; width: 100%; text-align: center; padding-top: 4px;">
+        <input id="agreement_cancel" type="button" style="font-size: 12px; line-height: 30px; color: #fff; background-color: #faa51a; border: 1px solid #faa51a; text-align: center; width: 100px; border-radius: 4px; margin-right: 15%;" value="不同意" onclick="agreement_cancel();">
+        <input id="agreement_ok" type="button" style="font-size: 12px; line-height: 30px; color: #fff; background-color: #faa51a; border: 1px solid #faa51a; text-align: center; width: 100px; border-radius: 4px;" value="同意并继续" onclick="agreement_ok();">
+      </div>
+    </div>
+  </div>
+
+	<div id="comment_dialog" style=" display:none;position: fixed;">
+
+		<div id="leftView">
+			<p id="comment_title"></p>
+			<div id="signImage" class="signImagecss"></div>
+		
+		</div>
+
+		<div id="tmpcanvascss" class="tmpcanvascss">
+			<div id="signTitle"></div>
+			<canvas id="comment_canvas"></canvas>
+		</div>
+
+		<div id="comment_btnContainerInner" class="comment_btncontainer">
+			<input id="comment_ok" type="button" class="button orange" value="确 定">
+			<input id="comment_back" type="button" class="button orange" value="后退">
+			<input id="comment_cancel" type="button" class="button orange" value="取 消">
+		</div>
+
+	</div>
+
+	<center>
+
+		<div id="dialog" style=" display:none;">
+			<!-- 显示签名区域-->
+			<div id="anysign_title" style="color:#333333;" width="100%" height="50%">请投保人<span style="font-size:20pt;"> 李 元 </span>签名</div>
+			<div id="container" onmousedown="return false;">
+				<canvas id="anysignCanvas" width="2">
+                    </canvas>
+			</div>
+
+			<div id="single_scrollbar" style="text-align: center;  vertical-align:middle; " width="100%">
+				<span id="single_scroll_text"> *滑动操作：</span>
+				<input id="single_scrollbar_up" type="button" class="button orange" value="左移" />
+				<input id="single_scrollbar_down" type="button" class="button orange" value="右移" />
+			</div>
+
+			<div id="btnContainerOuter" width="100%">
+
+				<div id="btnContainerInner" style="text-align: center;font-size:5pt;margin-top: 5px;" width="100%">
+					<input id="btnOK" type="button" class="button orange" value="确 定" onclick="sign_confirm();" />
+					<input id="btnClear" type="button" class="button orange" value="清 屏" onclick="javascript:clear_canvas();">
+					<input id="btnCancel" type="button" class="button orange" value="取 消" onclick="cancelSign();">
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="other">
+		<input type="button" name="初始化接口" value="初始化接口" style="width: 180px" onclick="javascript:testAnySign(112321321);">
+		<br>
+
+		<br>
+		<input type="button" name="设置表单数据" value="设置表单数据" style="width: 180px" onclick="javascript:testSetTemplateData();">
+		<br>
+		<br>
+		<input type="button" name="testAddEvidence" value="添加证据" style="width: 180px" onclick="javascript:testAddEvidence();">
+		<br>
+		<br>
+		<input type="button" name="单字签名" value="单字签名1" style="width: 180px" onclick="javascript:show_agreement(20);">
+		<br>
+		<br>
+		<input type="button" name="批注签名1" value="批注签名1" style="width: 180px" onclick="javascript:testCommentDialog(30);">
+		<br>
+
+		<br>
+		<input type="button" name="批注签名2" value="批注签名2" style="width: 180px" onclick="javascript:testCommentDialog(31);">
+		<br>
+		
+		<br>
+		<input type="button" name="批注签名3" value="批注签名3" style="width: 180px" onclick="javascript:testCommentDialog(32);">
+		<br>
+
+		<br>
+		<input type="button" name="上传数据是否准备就绪" value="上传数据是否准备就绪" style="width: 180px" onclick="javascript:testIsReadyToUpload();">
+		<br>
+		<br>
+		<input type="button" name="生成上传数据" value="生成上传数据" style="width: 180px" onclick="javascript:testGenData();">
+		<br>
+		<br>
+		<input type="button" name="获取版本信息" value="获取版本信息" style="width: 180px" onclick="javascript:testGetVersion();">
+		<br>
+		<br>
+		<input type="button" name="获取操作系统信息" value="获取操作系统信息" style="width: 180px" onclick="javascript:testGetOsInfo();">
+		<br>
+		
+		<br>
+		<img id="xss_20" src="data:image/gif;base64,R0lGODlhhwBIAJECAL6+vtHR0f///wAAACH5BAEAAAIALAAAAACHAEgAAAL/jI+py+0Po5y02ouz3rz7Dx7CSJbmiabqyrbuC6NLTNf2jddKzvf+r9oBh8TiS2hMKo3IpfOJa0KnVJa0is0Krtruk+sNMxPi8hJsTufQ6jaN7Y634PK6jGzPu+j6PL9f9wcYJzjYVmiYhphYtngCAMkDUDOJEklzCeRokolTCdNZEuoyyrPJaRnz+dL5uSrwahnbcyr6WJoyuwLJywvb28sCPKw7hyc5THmbOxLryqqCu3ecU3xLTBz9TLIqza3rbYzgYw1t3jw5Wo4bLi7S81qeSor6+yhszylvRQ2KDYyJnixYqr6J2sdvnLJdC+dp40YqnkFa/c4xu/YvY7FQ7O1yIZymMCBDkST1fUQ3xNG6kfVsacv4KxizjjFU4nvYcqI+f8I00jSh0ucuZ/d2FnXZwle0GzaH4kQKkSXBgz3zXdRR8Ym6o0tRepXlytrJEovAQTV6dqrTZlFZiWWaVWorqstysk0aday3sSQQSdSplm7afUTTonX4Jq7HnK1mZcsG1ifAlzBtCNra9QZfzZvdGWCUqBZoLKJHUyltGgrq1E5Ws1bi+vWYkLIJKa4tJjZuTbd3d9HtmyLt4I16E68C/Djc4cp/G2/+5Tn0M9KnJ0lu/Uj17ERmcEceIrz48eTLmz+PPr368gUAADs=" onclick="javascript:testPopupDialog(20);" />
+		<br>
+		
+		<br>
+		<img id="xss_21" src="data:image/gif;base64,R0lGODlhhwBIAJECAL6+vtHR0f///wAAACH5BAEAAAIALAAAAACHAEgAAAL/jI+py+0Po5y02ouz3rz7Dx7CSJbmiabqyrbuC6NLTNf2jddKzvf+r9oBh8TiS2hMKo3IpfOJa0KnVJa0is0Krtruk+sNMxPi8hJsTufQ6jaN7Y634PK6jGzPu+j6PL9f9wcYJzjYVmiYhphYtngCAMkDUDOJEklzCeRokolTCdNZEuoyyrPJaRnz+dL5uSrwahnbcyr6WJoyuwLJywvb28sCPKw7hyc5THmbOxLryqqCu3ecU3xLTBz9TLIqza3rbYzgYw1t3jw5Wo4bLi7S81qeSor6+yhszylvRQ2KDYyJnixYqr6J2sdvnLJdC+dp40YqnkFa/c4xu/YvY7FQ7O1yIZymMCBDkST1fUQ3xNG6kfVsacv4KxizjjFU4nvYcqI+f8I00jSh0ucuZ/d2FnXZwle0GzaH4kQKkSXBgz3zXdRR8Ym6o0tRepXlytrJEovAQTV6dqrTZlFZiWWaVWorqstysk0aday3sSQQSdSplm7afUTTonX4Jq7HnK1mZcsG1ifAlzBtCNra9QZfzZvdGWCUqBZoLKJHUyltGgrq1E5Ws1bi+vWYkLIJKa4tJjZuTbd3d9HtmyLt4I16E68C/Djc4cp/G2/+5Tn0M9KnJ0lu/Uj17ERmcEceIrz48eTLmz+PPr368gUAADs=" onclick="javascript:testPopupDialog(20);" />
+		<br>
+
+		<textarea id="result" rows="10"></textarea>
+
+		</div>
+
+	</center>
+  <script>
+    window.onload = function () {
+      testAnySign(112321321)
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+@import "vars";
+
+.gm-richtext {
+    color: $fClrMain;
+    line-height: 1.5;
+    ul, ol {
+        margin-left: 0.5rem;
+    }
+    ul, ul > li {
+        list-style-type: disc;
+    }
+    ol, ol > li {
+        list-style-type: decimal;
+    }
+    a {
+        color: $fClrLink;
+        text-decoration: underline;
+    }
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    img {
+        display: block;
+        max-width: 100%;
+    }
+    iframe {
+        max-width: 100%;
+        max-height: 5rem;
+    }
+}

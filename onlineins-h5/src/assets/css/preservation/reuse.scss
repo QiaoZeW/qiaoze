@@ -1,0 +1,221 @@
+@import "../../app.scss";
+/* 确认/焦点（红） */
+$fClrFocus: #E10312;
+
+/* 待确认/失焦（灰） */
+$fClrBlur: #666666;
+
+.container_l{
+    padding:30px;
+    background: #F2F2F2;
+    height: 100%;
+    // padding-bottom: 118px;animation
+}
+.container_s{
+    padding:30px;
+    background: #F2F2F2;
+    // height: 100%;
+    padding-bottom: 200px;
+}
+.container-1{
+    padding:30px;
+    background: #FFFFFF;
+    height: 100%;
+	padding-bottom: 118px;
+}
+.container-2{
+    padding:20px;
+    background: #F2F2F2;
+    height: 100%;
+}
+.container-3{
+    background: #FFFFFF;
+	padding-bottom: 118px;
+}
+.container-4{
+    background: #F2F2F2;
+    height: 100%;
+	padding-bottom: 118px;
+}
+
+//选中
+.focus{
+    border:2px solid $fClrFocus;
+}
+
+//未选中
+.un_focus{
+    border:2px solid $fClrBlur;
+}
+
+//弹框按钮（左右）
+.btnGroup{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    button{
+        width: 3.24rem;
+        height: 1.1rem;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius:10px;
+        font-size: 32px;
+        font-weight:500;
+    }
+    .btnLeft{
+        color: #E10312;
+        border:1px solid rgba(225,3,18,1);
+    }
+    .btnRight{
+        color: #fff;
+        background:rgba(225,3,18,1)
+    }
+}
+
+//主按钮层
+.mainBtn{
+    width: 750px;
+    height: 118px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    margin: auto;
+	z-index: 2;
+    button{
+        height: 88px;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        line-height: 88px;
+        font-size: 32px;
+    }
+    .only_btn{
+        width: 280px;
+        background: $fClrFocus;
+        margin-top: 16px;
+        position: relative;
+        left: 5.85rem;
+    }
+    .disable_only_btn{
+        width: 280px;
+        background: $fClrBlur;
+        margin-top: 16px;
+        position: relative;
+        left: 5.85rem;
+    }
+    //通用按钮
+    .may_btn{
+        background: $fClrFocus;
+        width: 690px;
+        margin: auto;
+    }
+    //待确认按钮
+    .disable_btn{
+        background: $fClrBlur;
+        width: 690px;
+        margin: auto;
+    }
+}
+//主按钮层
+.twoBtn{
+    width: 750px;
+    height: 118px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+	z-index: 2;
+    margin: auto;
+    button{
+        height: 88px;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        line-height: 88px;
+        font-size: 32px;
+    }
+    //通用按钮
+    .may_btn{
+        background: $fClrFocus;
+        width: 690px;
+        margin: auto;
+    }
+	//黄色按钮
+	.yew{
+		background:rgb(255,176,0);
+		margin:auto;
+		width: 690px;
+	}
+    //待确认按钮
+    .disable_btn{
+        background: $fClrBlur;
+        width: 690px;
+        margin: auto;
+    }
+}
+
+//底部标题
+.bottom_tittle{
+    color: #333333;
+    margin-top:60px;
+    text-align: center;
+    span{
+        color: $fClrFocus;
+    }
+}
+
+//卡片选项
+.m_policeCard .md-check{
+    margin: 0!important;
+}
+.m_policeCard .md-icon.icon-font.md{
+    color: #fff!important;
+    font-size: px2em(44px)!important;
+    position: absolute!important;
+    line-height: 1.06667rem!important;
+    left: -0.9rem!important;
+}
+.mainBtn .md-check{
+    font-size:28px;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:  px2em(118px);
+    position: absolute;
+    left: px2em(54px) ;
+}
+.mainBtn .md-icon.icon-font.md{
+    color: $fClrFocus!important;
+    font-size: px2em(44px)!important;
+}
+//修改mand-mobile dialog btn
+//.md-dialog-btn{
+//    width::px2em(280px);
+//    height::px2em(88px)!important;
+//    background:rgba(255,255,255,1);
+//    border-radius:10px;
+//    border:1px solid rgba(225,3,18,1);
+//}
+/**
+ * 修改mand-mobile dialog字体
+ */
+.md-dialog-body{
+    padding: 24px 22px 0 22px!important;
+}
+.md-dialog-body .md-dialog-title{
+    font-size: px2em(40px)!important;
+}
+.md-dialog-btn :last-child {
+	font-size:px2em(32px) !important;
+	font-weight:500 !important;
+	color:rgba(227,5,19,1) !important;
+}
+.md-dialog-btn :before {
+	font-size:px2em(32px) !important;
+	font-weight:500 !important;
+	color:rgba(51,51,51,1) !important;
+}

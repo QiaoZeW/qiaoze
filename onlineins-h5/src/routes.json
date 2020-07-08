@@ -1,0 +1,1143 @@
+{
+    "/product/detail": {
+        "view": "ProductDetail",
+        "path": "product/",
+        "url": "Detail",
+        "query": [
+            "product_id",
+            "gathering_id",
+            "articlePro_id",
+            "thirdClassDistributor",
+            "secondaryDistributor",
+            "shareUserCode",
+            "evaluation_id",
+            "reportDetail_id",
+            "agentCode",
+            "code",
+            "isbn"
+        ]
+    },
+    "/product/sunxinbaodetail": {
+        "view": "SunxinbaoDetail",
+        "path": "product/",
+        "url": "SunxinbaoDetail",
+        "query": [
+            "product_id",
+            "gathering_id",
+            "articlePro_id",
+            "thirdClassDistributor",
+            "secondaryDistributor",
+            "shareUserCode",
+            "evaluation_id",
+            "reportDetail_id",
+            "code",
+            "isbn"
+        ]
+    },
+    "/product/WeChatEnterpriseShare/EnterpriseShareDetail": {
+        "view": "EnterpriseShareDetail",
+        "path": "product/WeChatEnterpriseShare/",
+        "url": "EnterpriseShareDetail",
+        "query": [
+            "product_id",
+            "gathering_id",
+            "articlePro_id",
+            "thirdClassDistributor",
+            "secondaryDistributor",
+            "shareUserCode",
+            "evaluation_id",
+            "reportDetail_id",
+            "code",
+            "isbn"
+        ]
+    },
+    "/product/WeChatEnterpriseShare/EnterpriseShareProductList": {
+        "view": "EnterpriseShareProductList",
+        "path": "product/WeChatEnterpriseShare/",
+        "url": "EnterpriseShareProductList",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/WeChatEnterpriseShare/EnterpriseShareTrail": {
+        "view": "EnterpriseShareTrail",
+        "path": "product/WeChatEnterpriseShare/",
+        "url": "EnterpriseShareTrail",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/trial": {
+        "view": "ProductTrial",
+        "path": "product/",
+        "url": "Trial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/nosorrow/nosorrowtrial": {
+        "view": "ProductNoSorrowTrial",
+        "path": "product/nosorrow/",
+        "url": "NoSorrowTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/plustrial": {
+        "view": "ProductPlusTrial",
+        "path": "product/",
+        "url": "PlusTrial",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/kangluxurytrial": {
+        "view": "ProductKangluxuryTrial",
+        "path": "product/",
+        "url": "KangluxuryTrial",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/dkorenix/dkorenixtrial": {
+        "view": "ProductDKorenixTrial",
+        "path": "product/dkorenix/",
+        "url": "DKorenixTrial",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/kangbeyond/kangbeyondtrial": {
+        "view": "KangBeyondTrial",
+        "path": "product/kangbeyond/",
+        "url": "KangBeyondTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/chaobeibao/chaobeibaotrial": {
+        "view": "ChaobeibaoTrial",
+        "path": "product/chaobeibao/",
+        "url": "ChaobeibaoTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/chaohuibao/chaohuibaotrial": {
+        "view": "ChaohuibaoTrial",
+        "path": "product/chaohuibao/",
+        "url": "ChaohuibaoTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/yihuibao/yihuibaotrial": {
+        "view": "YihuibaoTrial",
+        "path": "product/yihuibao/",
+        "url": "YihuibaoTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/yihuitongzx/yihuitongtrial": {
+        "view": "YihuitongTrial",
+        "path": "product/yihuitongzx/",
+        "url": "YihuitongTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/yaohuitong/yaohuitongtrial": {
+        "view": "ProductYaohuitongTrial",
+        "path": "product/yaohuitong/",
+        "url": "YaohuitongTrial",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/giftInsurance/giftinsurance": {
+        "view": "GiftInsurance",
+        "path": "product/giftInsurance/",
+        "url": "GiftInsurance",
+        "query": [
+            "product_id",
+            "agentCode",
+            "secondaryDistributor",
+            "thirdClassDistributor",
+            "productRiskId"
+        ]
+    },
+    "/product/giftInsurance/giftinsurancehealth": {
+        "view": "GiftInsuranceHealth",
+        "path": "product/giftInsurance/",
+        "url": "GiftInsuranceHealth",
+        "query": [
+            "product_id",
+            "agentCode",
+            "secondaryDistributor",
+            "thirdClassDistributor",
+            "productRiskId"
+        ]
+    },
+    "/product/giftInsurance/giftinsurancedetail": {
+        "view": "GiftInsuranceDetail",
+        "path": "product/giftInsurance/",
+        "url": "GiftInsuranceDetail",
+        "title":"百年抗癌特药险",
+        "query": [
+            "product_id",
+            "agentCode",
+            "secondaryDistributor",
+            "thirdClassDistributor",
+            "productRiskId"
+        ]
+    },
+    "/product/giftInsurance/giftsuccessful": {
+        "view": "GiftSuccessful",
+        "path": "product/giftInsurance/",
+        "url": "GiftSuccessful",
+        "query": [
+            "product_id",
+            "agentCode",
+            "secondaryDistributor",
+            "thirdClassDistributor",
+            "productRiskId"
+        ]
+    },
+    "/product/waitpayresult": {
+        "view": "WaitPayResult",
+        "path": "product/",
+        "url": "WaitPayResult",
+        "query": [
+            "product_id",
+            "order_id",
+            "phone"
+        ]
+    },
+    "/product/successful": {
+        "view": "ProductSuccessful",
+        "path": "product/",
+        "title": "承保成功",
+        "url": "Successful"
+    },
+    "/product/agent/agentsuccessful": {
+        "view": "AgentSuccessful",
+        "path": "product/agent/",
+        "url": "AgentSuccessful"
+    },
+    "/product/guarantee": {
+        "view": "ProductGuarantee",
+        "path": "product/",
+        "url": "Guarantee"
+    },
+    "/product/health": {
+        "view": "ProductHealth",
+        "path": "product/",
+        "url": "Health",
+        "title": "健康告知",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/healthyht": {
+        "view": "HealthYht",
+        "path": "product/",
+        "url": "HealthYht",
+        "title": "药惠通健康告知",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/yihthealthtwice": {
+        "view": "YihtHealthTwice",
+        "path": "product/",
+        "url": "YihtHealthTwice",
+        "title" : "健康告知",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/healthtwice": {
+        "view": "HealthTwice",
+        "path": "product/",
+        "url": "HealthTwice",
+        "title" : "健康告知",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/insureNotice": {
+        "view": "InsureNotice",
+        "path": "product/",
+        "url": "InsureNotice",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/noticeDetail": {
+        "view": "NoticeDetail",
+        "path": "product/",
+        "url": "NoticeDetail",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/personalReminder": {
+        "view": "PersonalReminder",
+        "path": "product/",
+        "url": "PersonalReminder",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/bankAuthorize": {
+        "view": "BankAuthorize",
+        "path": "product/",
+        "url": "BankAuthorize",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/productClause": {
+        "view": "ProductClause",
+        "path": "product/",
+        "url": "ProductClause",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/buy": {
+        "view": "ProductBuy",
+        "path": "product/",
+        "url": "Buy",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/intelligentunderwriting": {
+        "view": "IntelligentUnderwriting",
+        "path": "product/",
+        "url": "IntelligentUnderwriting",
+        "title": "智能核保",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/fail": {
+        "view": "Fail",
+        "path": "product/",
+        "url": "Fail",
+        "title": "核保失败",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/sucess": {
+        "view": "Sucess",
+        "path": "product/",
+        "url": "Sucess",
+        "title": "核保成功",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/confirmsick": {
+        "view": "ConfirmSick",
+        "path": "product/",
+        "url": "ConfirmSick",
+        "title": "智能核保",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/questions": {
+        "view": "Questions",
+        "path": "product/",
+        "url": "Questions",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/healthnotification": {
+        "view": "HealthNotification",
+        "path": "product/",
+        "title": "补充健康告知",
+        "url": "HealthNotification",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/underwriting": {
+        "view": "UnderWriting",
+        "path": "product/",
+        "url": "UnderWriting",
+        "query": [
+            "product_id",
+            "orderNo",
+            "agentCode"
+        ]
+    },
+    "/product/underwritingfailed": {
+        "view": "UnderWritingFailed",
+        "path": "product/",
+        "url": "UnderWritingFailed",
+        "query": [
+            "product_id",
+            "orderNo",
+            "agentCode"
+        ]
+    },
+    "/product/humannucleussuccess": {
+        "view": "HumanNucleusSuccess",
+        "path": "product/",
+        "url": "HumanNucleusSuccess",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/artificialconfirm": {
+        "view": "ArtificialConfirm",
+        "path": "product/",
+        "url": "ArtificialConfirm",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+    "/product/useragreement": {
+        "view": "UserAgreement",
+        "path": "product/",
+        "url": "UserAgreement"
+    },
+    "/product/pivacystate": {
+        "view": "PrivacyState",
+        "path": "product/",
+        "url": "PrivacyState"
+    },
+    "/cms/article_detail": {
+        "view": "ArticleDetail",
+        "path": "cms/",
+        "url": "ArticleDetail",
+        "query": [
+            "article_id"
+        ]
+    },
+    "/cms/down": {
+        "view": "Down",
+        "path": "cms/",
+        "url": "Down"
+    },
+    "/cms/download": {
+        "view": "Download",
+        "path": "cms/",
+        "url": "Download"
+    },
+    "/activity/draw": {
+        "view": "Draw",
+        "path": "activity/",
+        "url": "Draw"
+    },
+    "/activity/sign": {
+        "view": "Sign",
+        "path": "activity/",
+        "url": "Sign"
+    },
+    "/activity/register": {
+        "view": "Register",
+        "path": "activity/",
+        "url": "Register"
+    },
+    "/activity/investigation": {
+        "view": "Investigation",
+        "path": "activity/",
+        "url": "Investigation",
+        "title": "回访问卷",
+        "query": [
+            "product_id",
+            "orderNo",
+            "order_id"
+        ]
+    },
+    "/activity/agentactivity/agentinvestigation": {
+        "view": "AgentInvestigation",
+        "path": "activity/agentactivity/",
+        "url": "AgentInvestigation",
+        "query": [
+            "product_id",
+            "orderNo",
+            "order_id"
+        ]
+    },
+    "/activity/gathering": {
+        "view": "Gathering",
+        "path": "activity/",
+        "url": "Gathering"
+    },
+    "/vipUser/vipUser": {
+        "view": "Vip",
+        "path": "vipUser/",
+        "url": "Vip",
+        "query": [
+            "current_level"
+        ]
+    },
+    "/vipUser/birthday": {
+        "view": "Birthday",
+        "path": "vipUser/",
+        "url": "Birthday",
+        "query": [
+            "current_level"
+        ]
+    },
+    "/vipUser/personal": {
+        "view": "Personal",
+        "path": "vipUser/",
+        "url": "Personal"
+    },
+    "/cms/about": {
+        "view": "About",
+        "path": "cms/",
+        "url": "About"
+    },
+    "/evaluation/evaluation": {
+        "view": "Evaluation",
+        "path": "evaluation/",
+        "url": "Evaluation",
+        "query": [
+            "report_id"
+        ]
+    },
+    "/evaluation/report": {
+        "view": "Report",
+        "path": "evaluation/",
+        "url": "Report",
+        "query": [
+            "reportUser_id"
+        ]
+    },
+    "/evaluation/reportdetail": {
+        "view": "ReportDetail",
+        "path": "evaluation/",
+        "url": "ReportDetail",
+        "query": [
+            "reportUser_id"
+        ]
+    },
+    "/vipUser/describle": {
+        "view": "Describle",
+        "path": "vipUser/",
+        "url": "Describle"
+    },
+    "/product/againorderpayment": {
+        "view": "AgainOrderPayment",
+        "path": "product/",
+        "url": "AgainOrderPayment",
+        "query": [
+            "product_id",
+            "agentCode",
+            "orderNo",
+            "phone",
+            "curRiskCode"
+        ]
+    },
+    "/product/orderpayments": {
+        "view": "OrderPayments",
+        "path": "product/",
+        "url": "OrderPayments",
+        "query": [
+            "product_id",
+            "agentCode",
+            "orderNo",
+            "name",
+            "curRiskCode"
+        ]
+    },
+    "/product/orderpayment": {
+        "view": "OrderPayment",
+        "path": "product/",
+        "url": "OrderPayment",
+        "query": [
+            "product_id",
+            "agentCode"
+        ]
+    },
+
+    "/activity/invitation": {
+        "view": "Invitation",
+        "path": "activity/",
+        "url": "Invitation",
+        "query": [
+            "groupBuying"
+        ]
+    },
+    "/activity/visitinvestigate": {
+        "view": "VisitInvestigate",
+        "path": "activity/",
+        "url": "VisitInvestigate"
+    },
+    "/activity/invitationshare": {
+        "view": "InvitationShare",
+        "path": "activity/",
+        "url": "InvitationShare",
+        "query": [
+            "inviterCode",
+            "groupBuying"
+        ]
+    },
+    "/activity/Visit/VisitSign": {
+        "view": "VisitSign",
+        "path": "activity/Visit/",
+        "url": "VisitSign",
+        "title": "电子签名"
+    },
+    "/activity/Visit/VisitSuccess": {
+        "view": "VisitSuccess",
+        "path": "activity/Visit/",
+        "url": "VisitSuccess",
+        "title": "回访完成"
+    },
+    "/activity/ouregist": {
+        "view": "OUregist",
+        "path": "activity/",
+        "url": "OUregist",
+        "query": [
+            "inviterCode",
+            "groupBuying"
+        ]
+    },
+    "/activity/fortunebag": {
+        "view": "FortuneBag",
+        "path": "activity/",
+        "url": "FortuneBag"
+    },
+    "/wechat/wxreg": {
+        "view": "WxReg",
+        "path": "wechat/",
+        "url": "WxReg"
+    },
+    "/wechat/wxprolist": {
+        "view": "WxProList",
+        "path": "wechat/",
+        "url": "WxProList"
+    },
+    "/wechat/wxinvestigation": {
+        "view": "WxInvestigation",
+        "path": "wechat/",
+        "url": "WxInvestigation"
+    },
+    "/wechat/wxactivitylist": {
+        "view": "WxActivityList",
+        "path": "wechat/",
+        "url": "WxActivityList"
+    },
+    "/product/jiahuibao/trial": {
+        "view": "jiahuibaoTrial",
+        "path": "product/jiahuibao/",
+        "url": "Trial",
+        "query": [
+            "product_id"
+        ]
+    },
+    "/product/health/SpecialOccupation": {
+        "view": "SpecialOccupation",
+        "path": "product/",
+        "url": "SpecialOccupation"
+    },
+    "/externalPay/externallist": {
+        "view": "ExternalList",
+        "path": "externalPay/",
+        "url": "ExternalList"
+    },
+    "/externalPay/externallogin": {
+        "view": "ExternalLogin",
+        "path": "externalPay/",
+        "title": "登录",
+        "url": "ExternalLogin"
+    },
+    "/externalPay/againorderpayments": {
+        "view": "AgainOrderPayments",
+        "path": "externalPay/",
+        "url": "AgainOrderPayments",
+        "query": [
+            "product_id",
+            "agentCode",
+            "orderNo",
+            "frompage",
+            "phone"
+        ]
+    },
+    "/policypreservation/policyservice": {
+        "view": "PolicyService",
+        "path": "policypreservation/",
+        "url": "policyservice",
+        "title": "保单服务"
+    },
+    "/externalPay/successfulpay": {
+        "view": "SuccessfulPay",
+        "path": "externalPay/",
+        "url": "SuccessfulPay"
+    },
+    "/externalPay/policydetails": {
+        "view": "PolicyDetails",
+        "path": "externalPay/",
+        "url": "PolicyDetails",
+        "title": "保单详情"
+    },
+    "/cms/insureQues/InsureQuestions": {
+        "view": "InsureQuestions",
+        "path": "cms/insureQues/",
+        "title": "保险20问",
+        "url": "InsureQuestions"
+    },
+    "/cms/prodStrategy/Strategy": {
+        "view": "Strategy",
+        "path": "cms/prodStrategy/",
+        "title": "保险攻略",
+        "url": "Strategy"
+    },
+    "/cms/prodStrategy/StrategyDetail": {
+        "view": "StrategyDetail",
+        "path": "cms/prodStrategy/",
+        "url": "StrategyDetail",
+        "query": [
+            "detail_id"
+        ]
+    },
+    "/activity/noviceprize": {
+        "view": "NovicePrize",
+        "path": "activity/",
+        "url": "NovicePrize"
+    },
+    "/activity/blankloading": {
+        "view": "BlankLoading",
+        "path": "activity/",
+        "url": "BlankLoading"
+    },
+    "/activity/PC/Gifts": {
+        "view": "Gifts",
+        "path": "activity/PC/",
+        "title": "免费送",
+        "url": "Gifts"
+    },
+    "/product/UploadIDcard": {
+        "view": "UploadIDcard",
+        "path": "product/",
+        "url": "UploadIDcard",
+        "title": "证件上传",
+        "query": [
+            "product_id",
+            "orderNo",
+            "agentCode"
+        ]
+    },
+    "/activity/insuranceactivity": {
+        "view": "InsuranceActivity",
+        "path": "activity/",
+        "title": "百万医疗险58元起",
+        "url": "InsuranceActivity"
+    },
+    "/activity/timelimitactivity": {
+        "view": "TimeLimitActivity",
+        "path": "activity/",
+        "title": "限时福利活动",
+        "url": "TimeLimitActivity"
+    },
+    "/cms/articlelistcollection": {
+        "view": "ArticleListCollection",
+        "path": "cms/",
+        "title": "我的资讯",
+        "url": "ArticleListCollection"
+    },
+    "/activity/groupbuying": {
+        "view": "GroupBuying",
+        "path": "activity/",
+        "url": "GroupBuying",
+        "title": "邀好友 组团拿奖励"
+    },
+    "/activity/warmgreetings": {
+        "view": "WarmGreetings",
+        "path": "activity/",
+        "title": "你的好友送来温暖问候",
+        "url": "WarmGreetings",
+        "query": [
+            "inviterCode"
+        ]
+    },
+    "/activity/m/Activity01": {
+        "view": "Activity01",
+        "path": "activity/m/",
+        "title": "百年人寿",
+        "url": "Activity01"
+    },
+    "/activity/m/Activity02": {
+        "view": "Activity02",
+        "path": "activity/m/",
+        "title": "百年人寿",
+        "url": "Activity02"
+    },
+    "/activity/m/Activity03": {
+        "view": "Activity03",
+        "path": "activity/m/",
+        "title": "百年人寿",
+        "url": "Activity03"
+    },
+    "/activity/m/Activity04": {
+        "view": "Activity04",
+        "path": "activity/m/",
+        "title": "百年人寿",
+        "url": "Activity04"
+    },
+    "/cms/notice/EmptyNoticeDetail": {
+        "view": "EmptyNoticeDetail",
+        "path": "cms/notice/",
+        "url": "EmptyNoticeDetail",
+        "title": "详情"
+    },
+    "/activity/bnsickness": {
+        "view": "BnSickness",
+        "path": "activity/",
+        "url": "BnSickness",
+        "title": "百年重疾险重磅升级！",
+        "query": [
+            "thirdClassDistributor",
+            "secondaryDistributor",
+            "code",
+            "isbn"
+        ]
+    },
+    "/product/giving/Glogin": {
+        "view": "Glogin",
+        "path": "product/giving/",
+        "title": "重疾险限时0元购",
+        "url": "Glogin"
+    },
+    "/product/giving/Gbuy": {
+        "view": "Gbuy",
+        "path": "product/giving/",
+        "title": "重疾险限时0元购",
+        "url": "Gbuy"
+    },
+    "/product/giving/GhealthNotice": {
+        "view": "GhealthNotice",
+        "path": "product/giving/",
+        "title": "健康告知",
+        "url": "GhealthNotice"
+    },
+    "/product/giving/GPolicyDetails": {
+        "view": "GPolicyDetails",
+        "path": "product/giving/",
+        "title": "保单详情",
+        "url": "GPolicyDetails"
+    },
+    "/product/giving/GList": {
+        "view": "GList",
+        "path": "product/giving/",
+        "title": "保单列表",
+        "url": "GList"
+    },
+    "/activity/childactivity": {
+        "view": "ChildActivity",
+        "path": "activity/",
+        "url": "ChildActivity",
+        "title": "童惠保少儿重疾险"
+    },
+    "/preservation/selfpreservation": {
+        "view": "SelfPreservation",
+        "path": "preservation/",
+        "url": "SelfPreservation",
+        "title": "自助保全"
+    },
+    "/preservation/cardupload": {
+        "view": "CardUpload",
+        "path": "preservation/",
+        "url": "CardUpload",
+        "title": "证件上传"
+    },
+    "/preservation/facerecognition": {
+        "view": "FaceRecognition",
+        "path": "preservation/",
+        "url": "FaceRecognition",
+        "title": "人脸识别"
+    },
+    "/preservation/identity/taxesstate": {
+        "view": "TaxesState",
+        "path": "preservation/identity/",
+        "url": "TaxesState",
+        "title": "个人纳税身份声明"
+    },
+    "/preservation/identity/policychanges": {
+        "view": "PolicyChanges",
+        "path": "preservation/identity/",
+        "url": "PolicyChanges",
+        "title": "证件有效期变更"
+    },
+    "/preservation/identity/doselectperson": {
+        "view": "DoselectPerson",
+        "path": "preservation/identity/",
+        "url": "DoselectPerson",
+        "title": "选择变更人员"
+    },
+    "/preservation/cancelpolicy/policycanceldetail": {
+        "view": "PolicyCancelDetail",
+        "path": "preservation/cancelpolicy/",
+        "url": "PolicyCancelDetail",
+        "title": "保单详情",
+        "query": [
+            "contNo"
+        ]
+    },
+    "/preservation/cancelpolicy/policycancellist": {
+        "view": "PolicyCancelList",
+        "path": "preservation/cancelpolicy/",
+        "url": "PolicyCancelList",
+        "title": "退保"
+    },
+    "/preservation/contact/contacttaxes": {
+        "view": "ContactTaxes",
+        "path": "preservation/contact/",
+        "url": "ContactTaxes",
+        "title": "个人纳税身份声明"
+    },
+    "/preservation/contact/selectpersons": {
+        "view": "SelectPersons",
+        "path": "preservation/contact/",
+        "url": "SelectPersons",
+        "title": "选择变更人员"
+    },
+    "/preservation/contact/contactdetails": {
+        "view": "ContactDetails",
+        "path": "preservation/contact/",
+        "url": "ContactDetails",
+        "title": "联系方式变更"
+    },
+    "/preservation/accountChange/optionpolicy": {
+        "view": "OptionPolicy",
+        "path": "preservation/accountChange/",
+        "url": "OptionPolicy",
+        "title": "交费账号变更"
+    },
+    "/preservation/accountChange/idcardchange": {
+        "view": "IdCardChange",
+        "path": "preservation/accountChange/",
+        "url": "IdCardChange",
+        "title": "上传证件"
+    },
+    "/activity/bdproduct": {
+        "view": "BdProduct",
+        "path": "activity/",
+        "url": "BdProduct",
+        "title": "百年人寿产品手册"
+    },
+    "/activity/accident/accidenttoground": {
+        "view": "AccidentToGround",
+        "path": "/activity/accident/",
+        "url": "AccidentToGround",
+        "title": "交通意外险"
+    },
+    "/activity/accident/bonus": {
+        "view": "Bonus",
+        "path": "/activity/accident/",
+        "url": "Bonus",
+        "title": "交通意外险"
+    },
+    "/activity/accident/success": {
+        "view": "Success",
+        "path": "/activity/accident/",
+        "url": "Success",
+        "title": "交通意外险"
+    },
+    "/activity/Cartoon/Cartoon": {
+        "view": "Cartoon",
+        "path": "activity/Cartoon/",
+        "title": "测测你的老年生活有多嗨",
+        "url": "Cartoon"
+    },
+    "/mp/MpPolicyList": {
+        "view": "MpPolicyList",
+        "path": "mp/",
+        "url": "MpPolicyList",
+        "query": [
+            "index",
+            "code",
+            "isbn"
+        ]
+    },
+    "/mp/MpPolicyDetail": {
+        "view": "MpPolicyDetail",
+        "path": "mp/",
+        "url": "MpPolicyDetail"
+    },
+    "/mp/MpLogin": {
+        "view": "MpLogin",
+        "path": "mp/",
+        "url": "MpLogin"
+    },
+    "/mp/MpHref": {
+        "view": "MpHref",
+        "path": "mp/",
+        "url": "MpHref",
+        "query": [
+            "code",
+            "u"
+        ]
+    },
+    "/activity/step/StepComputed": {
+        "view": "StepComputed",
+        "path": "activity/step/",
+        "title": "走星海 贏华为",
+        "url": "StepComputed"
+    },
+    "/mp/MyFamilyList": {
+        "view": "MyFamilyList",
+        "path": "mp/",
+        "url": "MyFamilyList",
+        "title": "我的家庭",
+        "query": [
+            "code"
+        ]
+    },
+    "/mp/MyFamilyAdd": {
+        "view": "MyFamilyAdd",
+        "path": "mp/",
+        "url": "MyFamilyAdd",
+        "query": [
+            "id"
+        ]
+    },
+    "/activity/HeadLines": {
+        "view": "HeadLines",
+        "path": "activity/",
+        "title": "新人有礼",
+        "url": "HeadLines"
+    },
+    "/activity/HeadLinesLanding": {
+        "view": "HeadLinesLanding",
+        "path": "activity/",
+        "title": "新人有礼",
+        "url": "HeadLinesLanding"
+    },
+    "/activity/step/ZuiMarket": {
+        "view": "ZuiMarket",
+        "path": "activity/step/",
+        "title": "走星海 贏华为",
+        "url": "ZuiMarket"
+    },
+    "/activity/m/Khb20": {
+        "view": "Khb20",
+        "path": "activity/m/",
+        "title": "康惠保2020 双11服务升级",
+        "url": "Khb20"
+    },
+    "/activity/PC/PCindex": {
+        "view": "PCindex",
+        "path": "activity/PC/",
+        "title": "产品中心-百年人寿保险股份有限公司-创新百年 关爱永恒",
+        "url": "PCindex"
+    },
+    "/activity/PC/PCscan": {
+        "view": "PCscan",
+        "path": "activity/PC/",
+        "title": "我的保单-百年人寿保险股份有限公司-创新百年 关爱永恒",
+        "url": "PCscan"
+    },
+    "/activity/PC/PCdetail": {
+        "view": "PCdetail",
+        "path": "activity/PC/",
+        "title": "产品详情",
+        "url": "PCdetail"
+    },
+    "/activity/TaskCenter/TaskCenter": {
+        "view": "TaskCenter",
+        "path": "activity/TaskCenter/",
+        "title": "薅羊毛专区",
+        "url": "TaskCenter"
+    },
+    "/activity/Appointment": {
+        "view": "Appointment",
+        "path": "activity/",
+        "title": "金鼠送福",
+        "url": "Appointment"
+    },
+    "/activity/ScreenShot": {
+        "view": "ScreenShot",
+        "path": "activity/",
+        "title": "金鼠送福",
+        "url": "ScreenShot"
+    },
+    "/activity/appointment/AppointmentPro01": {
+        "view": "AppointmentPro01",
+        "path": "activity/appointment/",
+        "title": "金鼠送福",
+        "url": "AppointmentPro01"
+    },
+    "/activity/appointment/AppointmentPro02": {
+        "view": "AppointmentPro02",
+        "path": "activity/appointment/",
+        "title": "金鼠送福",
+        "url": "AppointmentPro02"
+    },
+    "/activity/appointment/AppointmentStart": {
+        "view": "AppointmentStart",
+        "path": "activity/appointment/",
+        "title": "贺新年 金鼠有礼",
+        "url": "AppointmentStart"
+    },
+    "/activity/appointment/AppLanding": {
+        "view": "AppLanding",
+        "path": "activity/appointment/",
+        "title": "贺新年 金鼠有礼",
+        "url": "AppLanding"
+    },
+    "/activity/appointment/AppService": {
+        "view": "AppService",
+        "path": "activity/appointment/",
+        "title": "我的服务",
+        "url": "AppService"
+    },
+    "/activity/IntegralExchange/MyIntegEx": {
+        "view": "MyIntegEx",
+        "path": "activity/IntegralExchange/",
+        "title": "积分兑换",
+        "url": "MyIntegEx"
+    },
+    "/activity/IntegralExchange/ExRecord": {
+        "view": "ExRecord",
+        "path": "activity/IntegralExchange/",
+        "title": "兑换记录",
+        "url": "ExRecord"
+    },
+    "/externalPay/BindCard": {
+        "view": "BindCard",
+        "path": "externalPay/",
+        "title": "绑定银行卡",
+        "url": "BindCard"
+    },
+    "/activity/Lover/Lover": {
+        "view": "Lover",
+        "path": "activity/Lover/",
+        "title": "情人节活动",
+        "url": "Lover"
+    }
+}

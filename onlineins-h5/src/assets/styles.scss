@@ -1,0 +1,169 @@
+.md-field-item-title {
+    width: 8em !important;
+}
+
+.md-field-title {
+    font-weight: 700 !important;
+    font-size: 0.48rem !important;
+}
+
+.md-field-item-control {
+    font-size: 0.373333rem !important;
+}
+
+.md-dialog-btn:last-child {
+    color: #ff4747 !important;
+}
+
+.md-field-item:last-child .md-field-item-content:before {
+    background-color: #FFFFFF;
+}
+
+.md-button {
+    line-height: 1.173rem;
+    font-size: .4267rem;
+
+    &.primary.active,
+    &.primary.active:active,
+    &.primary {
+        background-color: #d7000f;
+        border-color: #d7000f;
+    }
+
+    &.primary:after {
+        border-color: #d7000f;
+    }
+
+    &.default {
+        border: 1px solid #c5cad5;
+    }
+
+    &.default:after,
+    &.primary:after {
+        border: none;
+    }
+
+    &.primary.active,
+    &.primary.active:active,
+    &.primary,
+    &.default,
+    &.primary:after,
+    &.default:after {
+        border-radius: 0.13333rem;
+    }
+}
+
+.md-dialog-title {
+    font-size: 0.45rem !important;
+}
+
+.md-field-item-control input::placeholder {
+    font-size: 28px;
+}
+
+.md-field-item-title {
+    color: #666;
+    text-align: left;
+}
+
+.md-field-item-control {
+    text-align: right;
+}
+
+.md-input-item-input {
+    text-align: right !important;
+}
+
+.md-input-item-fake,
+.md-input-item-input {
+    font-size: 0.37333rem !important;
+    color: #666666 !important;
+}
+
+.annuity .md-input-item.large .md-input-item-fake,
+.annuity .md-input-item.large .md-input-item-input {
+    font-size: .86667rem !important;
+    color: #000 !important;
+}
+
+.annuity .md-input-item.large .md-input-item-fake::-webkit-input-placeholder,
+.annuity .md-input-item.large .md-input-item-input::-webkit-input-placeholder {
+    font-size: .5667rem !important;
+}
+
+.annuity .md-field-item-title {
+    color: #000 !important;
+}
+
+.annuity .md-icon.icon-font.md {
+    font-size: 0.42667rem
+}
+
+.annuity .md-input-item-brief {
+    text-align: right !important;
+}
+
+.annuity-amnt {
+    border-top: 1px solid #e8e8e8;
+    padding-top: .3rem !important;
+}
+
+.annuity-amnt .md-input-item.large .md-input-item-input {
+    color: #d7000f !important;
+}
+
+.trial-mod .md-field-item-title {
+    color: #000 !important;
+    font-size: .4rem !important;
+}
+
+.trial-mod .md-icon.icon-font:before {
+    top: 1px;
+    color: #ccc;
+}
+
+.myBank .md-input-item-input {
+    width: 130% !important;
+    margin-left: -1.2rem !important;
+}
+
+.myWeight .md-field-item-content {
+    border-bottom: 1px solid #e8e8e8 !important;
+}
+
+.myEmailAdd .md-field-item-content {
+    border-bottom: 1px solid #e8e8e8 !important;
+}
+
+.md-dialog-body {
+    line-height: 1.5;
+}
+
+.iconTip {
+    width: 1rem !important;
+}
+
+.md-dialog-btn {
+    font-size: .4267rem;
+}
+
+.myDialog {
+    .md-dialog-content {
+        width: 12.08rem !important;
+    }
+
+    .md-dialog-body {
+        color: #666f83;
+        font-size: .9rem !important;
+        text-align: center !important;
+        padding: 0.69333rem;
+    }
+
+    .md-dialog-btn {
+        font-size: .8rem !important;
+        border-top: 1px solid #ccc;
+        padding: .5rem .2rem;
+    }
+}
+.smsCode .md-input-item-input{text-align: center !important;}
+.md-captcha .md-icon-close{display: none !important;}

@@ -1,0 +1,23 @@
+{
+    "project": "onlineins-h5",
+    "cdn": "",
+    "bxdServiceUrl": "https://crmrobot.aeonlife.com.cn/chat/h5/index.html?sysNum=fa80cd602dde489eb34207510aff607a&moduleType=2&robotFlag=6&groupId=9f76c466c13b4f39b8d4cdb938c461fc&channel=4&params=%7b%22partnerId%22%3a%22oCrFruIKd1FxtW8iMDKwDYvoaxrQ%22%2c%22sign%22%3a%22E+04XlBBa0F2+oLO8EMzUt+fQ%2fblEv6JBoESpijH1KQ%3d%22%2c%22name%22%3a%22%E5%BC%A0%E4%B8%89%22%2c%22mobile%22%3a13261143855%7d",
+
+    "server": "https://bnonline.aeonlife.com.cn/api",
+
+    "devServer": "https://bnonlinesit.aeonlife.com.cn/api",
+    "sitServer": "https://bnonlinesit.aeonlife.com.cn/api",
+    "uatServer": "https://bnonlineuat.aeonlife.com.cn/api",
+
+
+    "proSiteUrl": "https://bnonline.aeonlife.com.cn",
+
+    "devSiteUrl": "https://bnonlinesit.aeonlife.com.cn",
+    "siteUrl": "https://bnonlinesit.aeonlife.com.cn",
+    "uatSiteUrl": "https://bnonlineuat.aeonlife.com.cn",
+
+	"preservation_server": "https://bnonline.aeonlife.com.cn/bq",
+    "preservation_devServer": "https://bnonline.aeonlife.com.cn/bq",
+	"preservation_sitServer": "https://bnonlinesit.aeonlife.com.cn/bq",
+	"preservation_uatServer": "https://bnonlineuat.aeonlife.com.cn/bq"
+}
